@@ -58,7 +58,7 @@ def train(config):
             token=config.token,
             quantization_config=bnb_config,
             trust_remote_code=ALLOW_REMOTE_CODE,
-            attn_implementation="flash_attention_2",
+            #attn_implementation="flash_attention_2",
         )
     else:
         model = AutoModelForSequenceClassification.from_pretrained(
@@ -66,7 +66,7 @@ def train(config):
             config=model_config,
             token=config.token,
             trust_remote_code=ALLOW_REMOTE_CODE,
-            attn_implementation="flash_attention_2",
+            #attn_implementation="flash_attention_2",
         )
 
     logger.info(f"model dtype: {model.dtype}")
