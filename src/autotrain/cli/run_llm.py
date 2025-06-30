@@ -90,7 +90,7 @@ class RunAutoTrainLLMCommand(BaseAutoTrainCommand):
             "auto_find_batch_size",
             "push_to_hub",
             "merge_adapter",
-            "use_flash_attention_2",
+            "attn_implementation",
             "disable_gradient_checkpointing",
         ]
         for arg_name in store_true_arg_names:
