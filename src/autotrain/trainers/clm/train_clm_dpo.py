@@ -56,7 +56,7 @@ def train(config):
             token=config.token,
             quantization_config=bnb_config,
             trust_remote_code=ALLOW_REMOTE_CODE,
-            #attn_implementation="flash_attention_2",
+            attn_implementation="flash_attention_2",
         )
         logger.info("Using PEFT, model_ref will be set to None")
         model_ref = None
@@ -66,7 +66,7 @@ def train(config):
             config=model_config,
             token=config.token,
             trust_remote_code=ALLOW_REMOTE_CODE,
-            #attn_implementation="flash_attention_2",
+            attn_implementation="flash_attention_2",
         )
         if config.model_ref is not None:
             model_ref = AutoModelForCausalLM.from_pretrained(
@@ -74,7 +74,7 @@ def train(config):
                 config=model_config,
                 token=config.token,
                 trust_remote_code=ALLOW_REMOTE_CODE,
-                #attn_implementation="flash_attention_2",
+                attn_implementation="flash_attention_2",
             )
         else:
             model_ref = None
