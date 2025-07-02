@@ -8,7 +8,7 @@ loguru==0.7.3
 pandas==2.2.3
 nltk==3.9.1
 optuna==4.1.0
-Pillow>=11.0.0
+Pillow
 sacremoses==0.1.1
 scikit-learn==1.6.0
 sentencepiece==0.2.0
