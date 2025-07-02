@@ -21,7 +21,7 @@ def train(config):
 
     training_args["dataset_text_field"] = config.text_column
     training_args["max_seq_length"] = config.block_size
-    #training_args["packing"] = True
+    training_args["packing"] = True
     args = SFTConfig(**training_args)
 
     model = utils.get_model(config, tokenizer)
