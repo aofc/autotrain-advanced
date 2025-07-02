@@ -1,4 +1,4 @@
-albumentations==1.4.23
+albumentations
 datasets[vision]~=3.2.0
 evaluate==0.4.3
 ipadic==1.0.0
